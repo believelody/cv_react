@@ -1,0 +1,701 @@
+.main {
+  background: #00d8d6;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+
+.describe {
+  padding: 60% 5%;
+}
+
+.describe, .static {
+  border: 1px solid black;
+  height: auto;
+  margin: 0;
+  width: auto;
+}
+
+.list {
+  border: 1px solid black;
+  height: 100vh;
+  margin: 0;
+  overflow: auto;
+  padding: 0 10%;
+  position: relative;
+  width: 80%;
+}
+
+/****************** Normal Block ***********************/
+
+.block {
+  animation: minimize 1s ease-in;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 7px 0px;
+  display: grid;
+  grid-auto-columns: minmax(20%, 50%);
+  grid-gap: 3px;
+  grid-template-columns: 1fr 1fr;
+  height: auto;
+  text-align: center;
+  width: 100%;
+}
+
+.boxStyle {
+  align-content: stretch;
+  background: white;
+  border: 0.4rem solid #16a085;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 100%;
+  height: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  transition: .5s ease-in-out;
+}
+
+.boxStyle:hover {
+  border: 0.4rem solid #e74c3c;
+  box-shadow: -2px -2px 4px 2px #e74c3c, 2px 2px 4px 2px #e74c3c;
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.boxStyle > li {
+  border: 1px solid black;
+  height: 100%;
+  padding: 0;
+  position: relative;
+}
+
+.boxStyle > li:nth-child(1) {
+  border: none;
+  height: auto;
+}
+
+.boxStyle > li h1 {
+  background: #34495e;
+  border-radius: 5px 5px 0 0;
+  font-size: 1.8em;
+  height: auto;
+  margin: 0;
+  padding: 5%;
+  position: relative;
+  width: auto;
+}
+
+.boxStyle > li h1 span {
+  background: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  float: left;
+  height: 60%;
+  left: 0;
+  margin: 3% 1%;
+  overflow: hidden;
+  position: absolute;
+  top: 3%;
+  width: 12%;
+}
+
+.boxStyle > li h1 span img {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+li h2, li h4 {
+  margin: 0;
+}
+
+.boxStyle > li > span {
+  border: 1px solid black;
+  border-radius: 50%;
+  float: left;
+  left: 1%;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  padding: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.boxStyle > li > h5 {
+  margin: 0;
+  padding: 0;
+}
+
+.boxStyle > li > h5 a {
+  background: black;
+  color: white;
+  text-decoration: none;
+}
+
+.boxStyle > li > h6 {
+  float: left;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+/************************* Expand Block *****************************/
+.block-expand {
+  animation: expand 1s ease-out;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 7px 0px;
+  display: block;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+}
+
+.close {
+  background: white;
+  box-shadow: inset -2px -2px 7px rgba(0, 0, 0, .7), inset 2px 2px 7px rgba(0, 0, 0, .7) ;
+  color: black;
+  cursor: pointer;
+  float: right;
+  font-size: 2rem;
+  padding: 0 2%;
+  position: absolute;
+  right: 5%;
+  text-shadow: 3px 2px 7px rgba(0, 0, 0, .7);
+  top: 15%;
+}
+
+/*********************************Info Component **********************/
+.info {
+  background: white;
+  border: 0.4rem solid transparent;
+  border-image: linear-gradient(135deg, #44bd32, #fbc531, #c23616);
+  border-image-slice: 1;
+  box-shadow: -2px -2px 4px 2px #0000, 2px 2px 4px 2px #0000;
+  display: flex;
+  flex-direction: column;
+  height:auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.info > li {
+  border-top: 1px solid black;
+  flex-grow: 1;
+  font-size: 2rem;
+  position: relative;
+  width: 100%;
+}
+.info li:nth-child(1) {
+  border: none;
+}
+
+.info li:nth-child(2) {
+  background: none;
+  text-transform: uppercase;
+}
+
+.info li:nth-child(2) {
+  background: black;
+}
+
+.info li:nth-child(2) h2, .info li:nth-child(2) h4 {
+  background: linear-gradient(to right, #44bd32, #fbc531, #c23616);
+  font-size: 2rem;
+  text-shadow: 0 0 5px rgba(0, 0, 0, .3);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.info li:nth-child(2) h2 {
+  text-transform: uppercase;
+}
+
+.info li:nth-child(2) h4 {
+  text-transform: capitalize;
+}
+
+.info li h1 {
+  background: #000;
+  border-radius: 5px 5px 0 0;
+  color: white;
+  height: auto;
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  text-shadow: 3px 2px 7px rgba(255, 255, 255, .7);
+  text-transform: uppercase;
+}
+
+.info > li > span {
+  border: 2px solid black;
+  border-radius: 50%;
+  float: left;
+  left: 10%;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  padding: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*********************************Scolaire Component **********************/
+.scolaire {
+  background: white;
+  border: 0.4rem solid #40739e;
+  border-radius: 10px;
+  box-shadow: -2px -2px 4px 2px #0000, 2px 2px 4px 2px #0000;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.scolaire > li {
+  border-top: 1px solid black;
+  flex-grow: 1;
+  font-size: 2rem;
+  margin: 0;
+  padding: 7% 0 0 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.scolaire li:nth-child(1) {
+  border: none;
+  padding: 0;
+}
+
+.scolaire li h1 {
+  background: #000;
+  border-radius: 5px 5px 0 0;
+  color: white;
+  height: auto;
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  text-shadow: 3px 2px 7px rgba(255, 255, 255, .7);
+  text-transform: uppercase;
+}
+
+/*********************************Competence Component **********************/
+.competence {
+  background: white;
+  border: 0.4rem solid #40739e;
+  border-radius: 10px;
+  box-shadow: -2px -2px 4px 2px #487eb0, 2px 2px 4px 2px #40739e;
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/*************************** Competence Normal Mode **********************/
+.development {
+  align-content: center;
+  display: flex;
+  list-style: none;
+  height: auto;
+  margin: 5% 0;
+  padding: 0;
+  width: 100%;
+}
+
+.development > li {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.development > li canvas {
+  left: 10%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: -20%;
+}
+
+.development > li span {
+  border: 2px solid black;
+  border-radius: 50%;
+  float: left;
+  height: 2rem;
+  margin-left: 15%;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 2rem;
+}
+
+.development > li span img {
+  height: 100%;
+  width: 100%;
+}
+
+.personal {
+  align-content: center;
+  display: flex;
+  list-style: none;
+  height: auto;
+  margin: 5% 0;
+  padding: 0;
+  width: 100%;
+}
+
+.personal > li {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.personal > li span {
+  border: 2px solid black;
+  border-radius: 50%;
+  float: left;
+  height: 2rem;
+  margin-left: 20%;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 2rem;
+}
+
+.personal > li span img {
+  height: 100%;
+  width: 100%;
+}
+
+.language {
+  align-content: center;
+  display: flex;
+  list-style: none;
+  height: auto;
+  margin: 3% 0;
+  padding: 0;
+  width: 100%;
+}
+
+.language > li {
+  height: 100%;
+  margin: 0 0 0 9%;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.language > li canvas {
+  left: 16.5%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: -20%;
+}
+
+.language > li span {
+  border: 2px solid black;
+  border-radius: 50%;
+  float: left;
+  height: 2rem;
+  margin-left: 20%;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 2rem;
+}
+
+.language > li span img {
+  height: 100%;
+  width: 100%;
+}
+
+/*************************** Competence Expand Mode **********************/
+.competence > li {
+  border-top: 1px solid black;
+  position: relative;
+  width: 100%;
+}
+.competence li:nth-child(1) {
+  border: none;
+}
+
+.competence li h1 {
+  background: #000;
+  border-radius: 5px 5px 0 0;
+  color: white;
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  text-shadow: 3px 2px 7px rgba(255, 255, 255, .7);
+  text-transform: uppercase;
+}
+
+.item {
+  display: block;
+  height: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.item li {
+  border-top: 1px solid black;
+  position: relative;
+}
+
+.bar-label h5 {
+  float: left;
+  margin: 10px 0 0 15px;
+  padding: 0;
+}
+
+.bar-label .percent {
+  float: right;
+  font-size: 1em;
+  margin: 10px 15px 0 0;
+  padding: 0;
+}
+
+.bar .jauge {
+  background: #041c40;
+  height: 2px;
+  margin: 0px 10% 10px 10%;
+  position: relative;
+  width: auto;
+}
+
+.bar .jauge .progress::before {
+  background: #ffff;
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(41, 123, 247, 1);
+  content: "";
+  height: 12px;
+  position: absolute;
+  right: 0;
+  top: -5px;
+  width: 12px;
+}
+
+.bar .jauge .progress {
+  background: linear-gradient(to right, #003271, #2b80ff);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+
+/*********************************Professionnel Component **********************/
+.professionnel {
+  border: 0.4rem solid #40739e;
+  border-radius: 10px;
+  box-shadow: -2px -2px 4px 2px #487eb0, 2px 2px 4px 2px #40739e;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: auto;
+}
+
+.professionnel li {
+  border-top: 1px solid black;
+  position: relative;
+  width: 100%;
+}
+
+.professionnel li > h1 {
+  background: #000;
+  border-radius: 5px 5px 0 0;
+  color: white;
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  text-shadow: 3px 2px 7px rgba(255, 255, 255, .7);
+  text-transform: uppercase;
+}
+
+.professionnel li h5 {
+  margin: 2% 0;
+  padding: 0 0 0 5%;
+  text-align: left;
+}
+
+.professionnel .box {
+  flex-grow: 1;
+  height: 20%;
+  transition: 1s;
+}
+
+.professionnel .box:hover {
+  height: 50%;
+  text-overflow: none;
+}
+
+.professionnel .box:hover h5 {
+  white-space: pre-line;
+  overflow: auto;
+}
+
+.professionnel .box:hover h4 {
+  display: inline;
+}
+
+.professionnel .box h5 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 1s;
+}
+
+.professionnel .box h4 {
+  display: none;
+}
+
+@keyframes expand {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes minimize {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .main{
+    font-size: 0.8em;
+  }
+
+  .list {
+    padding: 0;
+    width: 100%;
+  }
+
+  .boxStyle h1 {
+    font-size: 22px;
+  }
+
+  .info > li, .scolaire > li {
+    font-size: 1.5em;
+  }
+
+  .personal > li span {
+    height: 1.7rem;
+    width: 1.7rem;
+  }
+}
+
+@media (max-width: 425px) {
+
+  .main {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: none;
+    grid-template-rows: 15% 75% 10%;
+  }
+
+  .describe, .list, .static {
+    height: auto;
+    padding: 0;
+    width: 100vw;
+  }
+
+  .list {
+    overflow-x: hidden;
+  }
+
+  .block {
+    height: 100%;
+  }
+
+  .block ul > li {
+    display: none;
+  }
+
+  .block ul > li:nth-child(1) {
+    display: block;
+  }
+
+  .boxStyle > li:nth-child(1) {
+    border: 1px solid black;
+    display: flex;
+    height: 100%;
+  }
+
+  .boxStyle > li:nth-child(1) h1 {
+    flex-grow: 1;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .boxStyle > li:nth-child(1) h1 span {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+  }
+
+  .block-expand {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .block-expand ul > li {
+    display: block;
+  }
+
+  .info {
+    font-size: 0.8em;
+    height: 100%;
+  }
+
+  .professionnel {
+    font-size: .8em;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
