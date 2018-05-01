@@ -45,7 +45,7 @@ class App extends Component {
         text = "Bienvenue sur mon CV intéractif. Il a été codé en ReactJs mais utilise essentiellement les fonctionnalités es6. Cliquez sur un block pour voir en détails et laissez-vous guider. Bon visionnage!!!";
         break;
     }
-    return (<p>{text}</p>);
+    return (<b>{text}</b>);
   }
 
   render() {
@@ -72,7 +72,19 @@ class App extends Component {
             </div>
           }
         </div>
-        <div className="static"></div>
+        <nav className="static">
+          {
+            this.state.index !== -1 ?
+            <ul>
+              <h2>MENU</h2>
+              {
+                blocks.map((item, i) => <li className={this.state.index === i ? "active" : ""} key={i} onClick={() => this.expandBlock(i)}>{item.name}</li>)
+              }
+            </ul>
+            :
+            ""
+          }
+        </nav>
       </div>
 
     );

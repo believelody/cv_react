@@ -1,5 +1,5 @@
 .main {
-  background: #00d8d6;
+  background: #f5f6fa;
   display: grid;
   grid-template-columns: 20% 60% 20%;
   grid-template-rows: none;
@@ -10,31 +10,76 @@
 }
 
 .describe {
-  padding: 60% 5%;
-}
-
-.describe, .static {
-  border: 1px solid black;
+  color: #192a56;
   height: auto;
-  margin: 0;
+  padding: 80px 5px;
+  text-shadow: 1px 5px 5px rgba(0, 0, 0, .4);
   width: auto;
 }
 
+.describe, .static {
+  margin: 0;
+}
+
 .list {
-  border: 1px solid black;
   height: 100vh;
   margin: 0;
   overflow: auto;
-  padding: 0 10%;
+  padding: 0;
   position: relative;
-  width: 80%;
+  width: 100%;
+}
+
+.static {
+  height: 100%;
+  padding: 0;
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+
+.static ul {
+  display: block;
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.static ul h2 {
+  text-shadow: 1px 5px 5px rgba(0, 0, 0, .4);
+}
+
+.static ul li {
+  border-top: 1px solid black;
+  color: #192a56;
+  cursor: pointer;
+  font-size: 2em;
+  padding: 10% 0;
+  text-shadow: 1px 5px 5px rgba(0, 0, 0, .4);
+  transition: .4s;
+}
+
+.static ul li:hover {
+  background: #192a56;
+  color: white;
+}
+
+.static ul .active {
+  background: #353b48;
+  color: white;
 }
 
 /****************** Normal Block ***********************/
 
 .block {
   animation: minimize 1s ease-in;
-  background: white;
+  background: black;
   border-radius: 10px;
   box-shadow: 0px 5px 7px 0px;
   display: grid;
@@ -47,11 +92,11 @@
 }
 
 .boxStyle {
-  align-content: stretch;
+  /*align-content: stretch;*/
   background: white;
-  border: 0.4rem solid #16a085;
-  box-sizing: border-box;
+  border: 1px solid black;
   border-radius: 10px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   flex: 100%;
@@ -64,14 +109,12 @@
 }
 
 .boxStyle:hover {
-  border: 0.4rem solid #e74c3c;
+  border: 0.2rem solid #e74c3c;
   box-shadow: -2px -2px 4px 2px #e74c3c, 2px 2px 4px 2px #e74c3c;
-  transform: scale(1.05);
-  z-index: 1;
 }
 
 .boxStyle > li {
-  border: 1px solid black;
+  border-top: 1px solid black;
   height: 100%;
   padding: 0;
   position: relative;
@@ -79,17 +122,20 @@
 
 .boxStyle > li:nth-child(1) {
   border: none;
+  border-radius: 5px 5px 0 0;
   height: auto;
 }
 
 .boxStyle > li h1 {
   background: #34495e;
+  color: white;
   border-radius: 5px 5px 0 0;
   font-size: 1.8em;
   height: auto;
   margin: 0;
   padding: 5%;
   position: relative;
+  text-shadow: 3px 5px 3px rgba(0, 0, 0, 1);
   width: auto;
 }
 
@@ -157,9 +203,10 @@ li h2, li h4 {
 /************************* Expand Block *****************************/
 .block-expand {
   animation: expand 1s ease-out;
-  background: white;
+  background: black;
   border-radius: 10px;
   box-shadow: 0px 5px 7px 0px;
+  box-sizing: content-box;
   display: block;
   height: 100%;
   text-align: center;
@@ -189,7 +236,7 @@ li h2, li h4 {
   box-shadow: -2px -2px 4px 2px #0000, 2px 2px 4px 2px #0000;
   display: flex;
   flex-direction: column;
-  height:auto;
+  height: auto;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -198,11 +245,14 @@ li h2, li h4 {
 
 .info > li {
   border-top: 1px solid black;
+  box-sizing: content-box;
   flex-grow: 1;
   font-size: 2rem;
+  height: 100%;
   position: relative;
   width: 100%;
 }
+
 .info li:nth-child(1) {
   border: none;
 }
@@ -234,7 +284,6 @@ li h2, li h4 {
 
 .info li h1 {
   background: #000;
-  border-radius: 5px 5px 0 0;
   color: white;
   height: auto;
   margin: 0;
@@ -261,8 +310,9 @@ li h2, li h4 {
 .scolaire {
   background: white;
   border: 0.4rem solid #40739e;
-  border-radius: 10px;
+  /*border-radius: 10px;*/
   box-shadow: -2px -2px 4px 2px #0000, 2px 2px 4px 2px #0000;
+  box-sizing: content-box;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -290,7 +340,7 @@ li h2, li h4 {
 
 .scolaire li h1 {
   background: #000;
-  border-radius: 5px 5px 0 0;
+  /*border-radius: 5px 5px 0 0;*/
   color: white;
   height: auto;
   margin: 0;
@@ -300,11 +350,27 @@ li h2, li h4 {
   text-transform: uppercase;
 }
 
+.scolar-items b {
+  float: left;
+  left: 25%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.scolar-items i {
+  float: left;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 /*********************************Competence Component **********************/
 .competence {
   background: white;
   border: 0.4rem solid #40739e;
-  border-radius: 10px;
+  /*border-radius: 10px;*/
   box-shadow: -2px -2px 4px 2px #487eb0, 2px 2px 4px 2px #40739e;
   display: block;
   list-style: none;
@@ -447,7 +513,7 @@ li h2, li h4 {
 
 .competence li h1 {
   background: #000;
-  border-radius: 5px 5px 0 0;
+  /*border-radius: 5px 5px 0 0;*/
   color: white;
   margin: 0;
   padding: 10px 0;
@@ -515,14 +581,16 @@ li h2, li h4 {
 
 /*********************************Professionnel Component **********************/
 .professionnel {
+  background: white;
   border: 0.4rem solid #40739e;
-  border-radius: 10px;
+  /*border-radius: 10px;*/
   box-shadow: -2px -2px 4px 2px #487eb0, 2px 2px 4px 2px #40739e;
   display: flex;
   flex-direction: column;
   height: 100%;
   list-style: none;
   margin: 0;
+  overflow: hidden;
   padding: 0;
   position: relative;
   width: auto;
@@ -530,13 +598,14 @@ li h2, li h4 {
 
 .professionnel li {
   border-top: 1px solid black;
+  box-sizing: content-box;
   position: relative;
   width: 100%;
 }
 
 .professionnel li > h1 {
   background: #000;
-  border-radius: 5px 5px 0 0;
+  /*border-radius: 5px 5px 0 0;*/
   color: white;
   margin: 0;
   padding: 10px 0;
@@ -546,8 +615,8 @@ li h2, li h4 {
 }
 
 .professionnel li h5 {
-  margin: 2% 0;
-  padding: 0 0 0 5%;
+  margin: 0;
+  padding: 0 2% 0 2%;
   text-align: left;
 }
 
@@ -563,11 +632,13 @@ li h2, li h4 {
 }
 
 .professionnel .box:hover h5 {
+  animation: visible 1s linear;
   white-space: pre-line;
   overflow: auto;
 }
 
 .professionnel .box:hover h4 {
+  animation: visible 1s linear;
   display: inline;
 }
 
@@ -592,6 +663,15 @@ li h2, li h4 {
 }
 
 @keyframes minimize {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes visible {
   0% {
     opacity: 0;
   }
@@ -644,6 +724,32 @@ li h2, li h4 {
     overflow-x: hidden;
   }
 
+  .static ul {
+    border: 1px solid black;
+    display: flex;
+    font-size: .5em;
+    height: 100%;
+    position: relative;
+    top: 0;
+    transform: rotateY(0);
+    width: 100%
+  }
+
+  .static ul h2 {
+    display: none;
+  }
+
+  .static ul li {
+    border: none;
+    flex-grow: 1;
+    float: left;
+    height: 100%;
+    line-height: 350%;
+    padding: 0 3%;
+    position: relative;
+    width: auto;
+  }
+
   .block {
     height: 100%;
   }
@@ -657,12 +763,13 @@ li h2, li h4 {
   }
 
   .boxStyle > li:nth-child(1) {
-    border: 1px solid black;
     display: flex;
     height: 100%;
   }
 
   .boxStyle > li:nth-child(1) h1 {
+    border-radius: 10px;
+    background: #40739e;
     flex-grow: 1;
     height: 100%;
     margin: 0;
@@ -673,7 +780,7 @@ li h2, li h4 {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 40%;
+    width: 70%;
   }
 
   .block-expand {
@@ -690,6 +797,10 @@ li h2, li h4 {
   .info {
     font-size: 0.8em;
     height: 100%;
+  }
+
+  .info li:nth-child(2) h2, .info li:nth-child(2) h4 {
+    font-size: 1.2rem;
   }
 
   .professionnel {
