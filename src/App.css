@@ -352,7 +352,7 @@ li h2, li h4 {
 
 .scolar-items b {
   float: left;
-  left: 25%;
+  left: 20%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
