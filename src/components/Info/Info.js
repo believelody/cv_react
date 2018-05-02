@@ -26,7 +26,6 @@ class Info extends React.Component {
       <li><span><i className="fas fa-phone"></i></span> <h6>06.63.74.19.76</h6></li>
       <li><span><i className="fas fa-at"></i></span> <h6>believelody@gmail.com</h6></li>
       <li><span><i className="fas fa-car"></i></span> <h6>Permis B</h6></li>
-      <li></li>
     </ul>
   )
 

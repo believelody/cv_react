@@ -18,10 +18,10 @@ class Scolaire extends React.Component {
   expand = () => (
     <ul className="scolaire" onClick={this.expandBlock.bind(this)}>
       <li><h1>{this.props.title}</h1><span className="close" onClick={this.minimizeBlock.bind(this)}>X</span></li>
-      <li><b>2017 - 2018</b> <i>Master 1 GIME</i></li>
-      <li><b>2014 - 2015</b> <i>Licence 3 GEII</i></li>
-      <li><b>2012 - 2013</b> <i>DUT 2 GEII</i></li>
-      <li><b>2011 - 2012</b> <i>DUT 1 GEII</i></li>
+      <li className="scolar-items"><b>2017 - 2018</b> <i>Master 1 GIME</i></li>
+      <li className="scolar-items"><b>2014 - 2015</b> <i>Licence 3 GEII</i></li>
+      <li className="scolar-items"><b>2012 - 2013</b> <i>DUT 2 GEII</i></li>
+      <li className="scolar-items"><b>2011 - 2012</b> <i>DUT 1 GEII</i></li>
     </ul>
   )
 

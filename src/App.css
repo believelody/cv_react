@@ -7,7 +7,7 @@
   min-height: 100vh;
   overflow: hidden;
   padding: 0;
-  width: 100%;
+  min-width: 100vw;
 }
 
 .describe {
@@ -23,7 +23,7 @@
 }
 
 .list {
-  height: 100vh;
+  height: 100%;
   margin: 0;
   overflow: auto;
   padding: 0;
@@ -32,6 +32,7 @@
 }
 
 .static {
+  font-weight: 500;
   height: 100%;
   padding: 0;
   position: relative;
@@ -87,7 +88,7 @@
   grid-auto-columns: minmax(20%, 50%);
   grid-gap: 3px;
   grid-template-columns: 1fr 1fr;
-  height: auto;
+  height: 100%;
   text-align: center;
   width: 100%;
 }
@@ -170,7 +171,8 @@ li h2, li h4 {
   border: 1px solid black;
   border-radius: 50%;
   float: left;
-  left: 1%;
+  font-size: 1.5em;
+  left: 2%;
   margin: 0;
   overflow: hidden;
   position: absolute;
@@ -192,6 +194,7 @@ li h2, li h4 {
 
 .boxStyle > li > h6 {
   float: left;
+  font-size: .8em;
   margin: 0;
   padding: 0;
   position: absolute;
@@ -246,10 +249,10 @@ li h2, li h4 {
 
 .info > li {
   border-top: 1px solid black;
-  box-sizing: content-box;
   flex-grow: 1;
-  font-size: 2rem;
   height: 100%;
+  margin: 0;
+  padding: 0;
   position: relative;
   width: 100%;
 }
@@ -327,7 +330,7 @@ li h2, li h4 {
   flex-grow: 1;
   font-size: 2rem;
   margin: 0;
-  padding: 7% 0 0 0;
+  padding: 0;
   position: relative;
   text-align: center;
   width: 100%;
@@ -705,7 +708,7 @@ li h2, li h4 {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 500px) {
 
   .main {
     display: grid;
@@ -795,8 +798,7 @@ li h2, li h4 {
   }
 
   .info {
-    font-size: 0.8em;
-    height: 100%;
+    font-size: 1em;
   }
 
   .info li:nth-child(2) h2, .info li:nth-child(2) h4 {
@@ -808,5 +810,11 @@ li h2, li h4 {
     height: 100%;
     margin: 0;
     padding: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .scolar-items b {
+    left: 10%;
   }
 }
