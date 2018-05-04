@@ -6,7 +6,7 @@ const boxes = [
     description: `Ce projet est une compilation de tout mon apprentissage javascript.
     En tant qu'autodidacte, j'ai commencé une série de mini-projets sur divers concepts, problématiques, notions pertinents régulièrement rencontrés dans le web development. Je me focalise particulièrement sur le css et le javascript. Pour celà ces mini-projets sont faits en pur html - css - vanilla. De plus, c'est aussi une occasion pour moi de développer les nombreuses possibilités qu'offre l'ES6, mettre en pratique les notions de bases du développement web et explorer le grand panel d'outils et API qui accompagne javascript. J'aborde les notions suivantes:\r\n
     - Les APIs;
-    - Le responsive design: grid, flexbox et bootstrap;
+    - Le responsive design: grid, flexbox et bootstrap (tous les projets ne le sont pas);
     - Les animations et designs en css;
     - Les animations et fonctionnalités dynamiques en javascript;
     J'ai déployé ce projet sur la plateforme de cloud heroku. Il est régulièrement mis à jour.`,
