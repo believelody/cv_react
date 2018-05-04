@@ -30,7 +30,7 @@ class App extends Component {
     let text = "";
     switch (id) {
       case 0:
-        text = "Vous êtes dans le block Info. Il concerne mes informations personnelles. Passez la souris sur l'un des champs pour voir l'animation. Cliquez sur la croix en haut à droite pour revenir à la liste.";
+        text = "Vous êtes dans le block Info. Il concerne mes informations personnelles. Cliquez sur la croix en haut à droite pour revenir à la liste.";
         break;
       case 1:
         text = "Vous êtes dans le bloc Professionnel. Ce bloc concerne les projets sur lesquels j'ai travaillé. Projets de stage, universitaires ou personnels, passez la souris sur un champ de la liste pour en savoir plus. Cliquez sur la croix en haut à droite pour revenir à la liste.";
