@@ -339,7 +339,7 @@ li h2, li h4 {
 .scolaire > li {
   border-top: 1px solid black;
   flex-grow: 1;
-  font-size: 2rem;
+  font-size: 150%;
   margin: 0;
   padding: 0;
   position: relative;
@@ -362,6 +362,10 @@ li h2, li h4 {
   text-align: center;
   text-shadow: 3px 2px 7px rgba(255, 255, 255, .7);
   text-transform: uppercase;
+}
+
+.scolar-items {
+  /*font-size: 50%;*/
 }
 
 .scolar-items b {
@@ -829,21 +833,30 @@ li h2, li h4 {
 
 @media (max-width: 425px) {
 
+  .describe {
+    font-size: 70%;
+  }
+
   .boxStyle > li:nth-child(1) h1 span {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 60%;
   }
+
+  .scolaire li {
+    font-size: 130%;
+  }
 }
 
 @media (max-width: 375px) {
-  .describe {
-    font-size: 70%;
-  }
 
   .boxStyle > li h1 {
     font-size: 1.2em;
+  }
+
+  .scolaire li h1 {
+    font-size: 1.5em;
   }
 
   .scolar-items b {
@@ -852,7 +865,13 @@ li h2, li h4 {
 }
 
 @media (max-width: 320px) {
+  .describe {
+    font-size: 65%;
+  }
 
+  .static ul li, .competence li h1 {
+    font-size: 150%;
+  }
 
   .boxStyle > li:nth-child(1) h1 span {
     left: 50%;
