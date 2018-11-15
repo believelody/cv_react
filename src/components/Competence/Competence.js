@@ -16,7 +16,7 @@ const front = {
 const back = {
   title: "BackEnd",
   tab: [
-    {name: "NodeJS", value: 65}
+    {name: "NodeJS", value: 65},
     {name: "PHP", value: 50},
     {name: "MySQL", value: 55},
     {name: "Firebase", value: 65},
