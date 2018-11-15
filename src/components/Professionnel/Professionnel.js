@@ -114,17 +114,22 @@ class Professionnel extends React.Component {
     <ul className={this.props.boxStyle} onClick={this.expandBlock.bind(this)}>
       <li><h1><span><img src={require("./img/tie.png")} alt="" /></span> {this.props.title}</h1></li>
       <li>
-        <i>2017 - 2018</i>: <b>JS work Project</b>
-        <h5>Ce projet est une compilation de tout mon apprentissage javascript. Il est régulièrement mis à jour.  Cliquez pour en savoir plus</h5>
-      </li>
-      <li>.<br/>.<br/>.</li>
-      <li>
-        <i>2016 - 2017</i>: <b>React Firebase Post</b>
-        <h5>Ceci est un projet personel. Une simple application CRUD reliée à la base de données firebase de Google. Cliquez pour en savoir plus</h5>
+        <i>2018 - En Cours</i>: <b>Site web vitrine pour un animateur professionnel</b>
+        <h5>King Djay est un animateur localisé en Normandie. Pour dynamiser son activité hors de sa
+        région, il m’a été demandé de développer un site web vitrine pouvant présenter un bon
+        nombre de ses activités. Aussi, cela fait plus sérieux. Je développe ce site avec React. Passez la souris pour en savoir plus</h5>
       </li>
       <li>
-        <i>2014 - 2015</i>: <b>Projet Ionic: FlashLike</b>
-        <h5>Ce projet a été réalisé avec le framework hybride Ionic version 2 pour la partie mobile et Angular 2 pour le site web. Cliquez pour en savoir plus</h5>
+        <i>2018 - En Cours</i>: <b>Projet Universitaire ITM</b>
+        <h5>Le projet ITM est une mise en situation réelle d’interconnexion entre terminaux mobiles. Le
+        sujet proposé est de mettre à disposition d’une entreprise des systèmes pouvant intéragir
+        entre eux. Ceci est un travail de groupe. Je m’occupe de la conception d’une application web
+        qui permettrait à la RH de gérer les présences et absences du personnel et voir en temps réel
+        leur position dans le batiment. Je le développe avec React et firebase comme bdd. Passez la souris pour en savoir plus</h5>
+      </li>
+      <li>
+        <i>2017 - 2018</i>: <b>Projet Ionic: FlashLike</b>
+        <h5>Ce projet a été réalisé avec le framework hybride Ionic version 2 pour la partie mobile et Angular 2 pour le site web. Passez la souris pour en savoir plus</h5>
       </li>
       <li>.<br/>.<br/>.</li>
     </ul>
