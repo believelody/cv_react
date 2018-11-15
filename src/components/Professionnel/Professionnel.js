@@ -104,7 +104,7 @@ class Professionnel extends React.Component {
         boxes.map((box, index) => <li className="box" key={index}>
         <i>{box.date}</i>: <b>{box.title}</b>
         <h5>{box.description}</h5>
-        {box.link ? <h4>Pour tester l'application, cliquez <a href={box.link}>ici</a></h4> : ''}
+        {box.link && <h4>Pour tester l'application, cliquez <a href={box.link}>ici</a></h4>}
         </li>)
       }
     </ul>
