@@ -5,10 +5,10 @@ import Bar from './Bar';
 const front = {
   title: "FrontEnd",
   tab: [
-    {name: "Javascript", value: 65},
+    {name: "Javascript", value: 75},
     {name: "HTML5", value: 85},
     {name: "CSS3", value: 70},
-    {name: "ReactJs", value: 60},
+    {name: "ReactJs", value: 70},
     {name: "Angular2", value: 60}
   ]
 };
@@ -16,9 +16,11 @@ const front = {
 const back = {
   title: "BackEnd",
   tab: [
+    {name: "NodeJS", value: 65}
     {name: "PHP", value: 50},
-    {name: "MySQL", value: 60},
+    {name: "MySQL", value: 55},
     {name: "Firebase", value: 65},
+    {name: "MongoDB", value: 65},
     {name: "Laravel5.5", value: 40}
   ]
 };
@@ -37,7 +39,7 @@ const responsive = {
   tab: [
     {name: "Bootstrap 3", value: 70},
     {name: "Material Design", value: 60},
-    {name: "Semantic React UI", value: 65},
+    {name: "Semantic React UI", value: 75},
     {name: "CSS GRID / Flexbox", value: 75}
   ]
 };
